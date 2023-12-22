@@ -1,0 +1,5 @@
+1	jinkuiyaolue	金匮要略
+2	huangdineijing	黄帝内经
+3	yinyangwuxing	阴阳五行
+4	sizhenbagang	四诊八纲
+5	bianzhengshizhi	辩证施治
