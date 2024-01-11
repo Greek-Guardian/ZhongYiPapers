@@ -1,0 +1,163 @@
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 1px;
+    background-color: #f0f0f0;
+}
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"], select {
+    width: 600px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+input[id="UserName"], select {
+    width: 60px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+input[id="refresh"] {
+    background-color: rgb(241, 245, 239);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[id="refresh"]:hover {
+    background-color: #45a049;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider {
+background-color: #2196F3;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
+
+/* 圆形滑块 */
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+
+
+
+/* 表格的样式 */
+table{
+    width: 100%;
+    /* border-collapse: collapse; */
+
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+table caption{
+    font-size: 2em;
+    font-weight: bold;
+    margin: 1em 0;
+}
+
+th,td{
+    border: 1px solid #999;
+    text-align: center;
+    padding: 20px 0;
+    word-break:break-all;
+}
+
+table thead tr{
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+table tbody tr:nth-child(odd){
+    /* background-color: rgb(211, 202, 221); */
+    background-color: rgb(249, 255, 239);
+}
+
+table tbody tr:hover{
+    background-color: rgb(220, 235, 217);
+}
+
+table tbody tr td:first-child{
+    font-family: Verdana;
+    font-weight: bold;
+    word-break:keep-all;
+}
+
+table tfoot tr td{
+    text-align: right;
+    padding-right: 20px;
+}
+

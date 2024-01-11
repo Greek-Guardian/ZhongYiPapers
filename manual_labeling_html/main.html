@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>数据标注</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <script type="text/javascript" src="main.js">
+        // 这里写的代码不会执行，执行的main.js文件
+        // window.alert("Test");
+    </script>
+    <table>
+        <thead>
+            <tr>
+              <td>UID</td>
+              <td id="UID">114514</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Title</td>
+                <td id="Title">114514</td>
+            </tr>
+            <tr>
+                <td>Abstract</td>
+                <td id="Abstract" style="text-indent: 20px;">114514</td>
+            </tr>
+            <tr>
+                <td>Keywords</td>
+                <td id="Keywords">114514</td>
+            </tr>
+            <tr>
+                <td>Journal</td>
+                <td id="Journal">114514</td>
+            </tr>
+            <tr>
+                <td>Authors</td>
+                <td id="Authors">114514</td>
+            </tr>
+            <tr>
+                <td>&nbsp Affiliations &nbsp</td>
+                <td id="Affiliations">114514</td>
+            </tr>
+            <tr>
+                <td>Year</td>
+                <td id="Year">114514</td>
+            </tr>
+            <tr>
+                <td>Link</td>
+                <td id="Link"><a id="paperLink" target="_blank">114514</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <form action="#">
+        <table style="padding:0px; border-radius:0px;box-shadow:none;">
+            <tbody>
+                <tr style="background-color:white;">
+                    <td>
+                        姓名：<input type="text" id="UserName" placeholder="Enter" value="">
+                    </td>
+                    <td>
+                        中医药文章：
+                        <label class="switch">
+                            <input type="checkbox" id="zhongyi" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </td>
+                    <td>
+                        置信度：<input type="range" id="ConfidenceRoll" min="0" max="1" step="0.01" value="1" onchange="document.getElementById('Confidence').value=value">
+                        <input type="number" id="Confidence" min="0" max="1" step="0.01" value="1" onchange="document.getElementById('ConfidenceRoll').value=value">
+                    </td>
+                    <td>
+                        备注：<input type="text" id="Notes" placeholder="Enter here" value="">
+                    </td>
+                    <td>
+                        <input type="submit" value="提交", onclick="sendClassification()">
+                        <input type="submit" id="refresh" value="刷新", onclick="item_refresh()">
+                    </td>
+                    <!-- <td>
+                    </td> -->
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
