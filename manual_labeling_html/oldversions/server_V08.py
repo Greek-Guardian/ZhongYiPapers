@@ -1,24 +1,21 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 from request_handler import handle_request
-from utils import PaperData
-import pickle, os
+from utils import User, PaperData
+import pickle
 
-database_path = r"D:\vscode_workspace\ZhongYiPapers\manual_labeling_html\Database\\"
-classified_items_json_path = database_path + r"classified_items_json.json"
-raw_items_path = database_path + r"raw_items.json"
+classified_items_json_path = r"D:\vscode_workspace\ZhongYiPapers\manual_labeling_html\Database\classified_items_json.json"
+raw_items_path = r"D:\vscode_workspace\ZhongYiPapers\manual_labeling_html\Database\raw_items.json"
 
 if __name__ == '__main__':
     # 初始化文章数据
-    paper_data = PaperData(database_path, classified_items_json_path, raw_items_path)
+    paper_data = PaperData(classified_items_json_path, raw_items_path)
     # 初始化用户数据
     try:
-        with open(paper_data.user_dict_path, "rb") as file:
+        with open("user_dict.pickle", "rb") as file:
             user_dict = pickle.load(file)
-        print("user_dict.pickle已读取")
     except:
         user_dict = {}
-        print("user_dict.pickle未读取")
 
     # 后台主程序从这里开始运行
     app = Flask(__name__)
@@ -36,7 +33,7 @@ if __name__ == '__main__':
         print("Input:", data)
         message = handle_request(paper_data, user_dict, data)
         print("Output:", message)
-        print("-"*50)
+        print("-"*25)
         # （直接return就可以，python的库会帮我们做这个传送操作）
         # 传送的信息仍然是json格式：{'answer':SparkApi.answer}
         return jsonify(message)
