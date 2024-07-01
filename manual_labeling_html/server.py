@@ -6,7 +6,8 @@ import pickle, os
 
 database_path = r"D:\vscode_workspace\ZhongYiPapers\manual_labeling_html\Database\\"
 classified_items_json_path = database_path + r"classified_items_json.json"
-raw_items_path = database_path + r"raw_items.json"
+# raw_items_path = database_path + r"raw_items.json"
+raw_items_path = r"D:\vscode_workspace\database\MetaData.json"
 
 if __name__ == '__main__':
     # 初始化文章数据

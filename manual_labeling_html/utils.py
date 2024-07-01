@@ -12,8 +12,10 @@ class PaperData():
 
         # 默认该文件的格式是{{},{},{}...}
         with open(self.raw_items_path, 'r', encoding='utf-8') as f:
-            self.raw_items_dict = json.load(f)
-        self.raw_item_uid_list = list(self.raw_items_dict.keys())
+            tmp = json.load(f)
+        self.raw_item_uid_list = tmp[0]
+        self.raw_items_dict = tmp[1]
+        # self.raw_item_uid_list = list(self.raw_items_dict.keys())
         # self.raw_item_uid_list = self.raw_item_uid_list.sort()
 
         # self.item_queue = LifoQueue()

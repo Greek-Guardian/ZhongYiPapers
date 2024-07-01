@@ -35,6 +35,8 @@ class DbscanClustering():
         corpus = []
         with open(corpus_path, 'r', encoding='utf-8') as f:
             for line in f:
+                if line == '\n':
+                    continue
                 corpus.append(' '.join([word for word in jieba.lcut(line.strip()) if word not in self.stopwords]))
         return corpus
 
@@ -103,5 +105,5 @@ class DbscanClustering():
 
 if __name__ == '__main__':
     dbscan = DbscanClustering(stopwords_path='../data/stop_words.txt')
-    result = dbscan.dbscan('../data/test_data.txt', eps=0.05, min_samples=3)
+    result = dbscan.dbscan('../data/test_data.txt', eps=0.05, min_samples=2)
     print(result)
