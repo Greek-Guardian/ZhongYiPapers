@@ -1,4 +1,9 @@
-*.pkl
+# *.pkl
 *.pyc
 **/__pycache__
 MetaData.json
+*.jpg
+*.png
+*.front-core
+titles_keywords.json
+CNN.pth
