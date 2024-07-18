@@ -1,4 +1,7 @@
 # *.pkl
+data.pkl
+G.pkl
+graphs_per_year.pkl
 *.pyc
 **/__pycache__
 MetaData.json
